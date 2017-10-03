@@ -6,3 +6,6 @@ function playMusic(x) {
 function stopMusic(x) { 
     x.nextElementSibling.pause(); 
 }
+function toggleHamburg(x){
+    document.getElementById("menu-list").classList.toggle("hidden-list");
+}

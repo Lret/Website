@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
     <meta charset="UTF-8">
     <title>Music Box</title>
@@ -13,9 +13,21 @@
     <header>
         <nav>
             <div class="menu">
-                <img class="icon-small" src="http://via.placeholder.com/50x50">
-                <img class="banner" src="http://via.placeholder.com/250x50">
-                <ul class="menu-list">
+                <div class="header-box">
+                    <img class="icon-small" src="http://via.placeholder.com/50x50">
+                    <img class="banner" src="http://via.placeholder.com/250x50">
+
+                    <div class="hamburger-menu">
+                        <input type="checkbox" value="1" id="hamburger-menuInput" onclick="toggleHamburg(this)" />
+                        <label for="hamburger-menuInput">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <ul id="menu-list">
                     <li><a href="html/index.html">Home</a></li>
                     <li><a href="html/main.html">Main</a></li>
                     <li><a href="html/music.html">Music?</a></li>
@@ -49,7 +61,7 @@
             <div class="image-frame" onmouseover="playMusic(this)" onmouseleave="stopMusic(this)">
                 <img src="http://via.placeholder.com/350x150">
             </div>
-            <audio src="music/Calm-music-for-kids.mp3"></audio>
+            <audio src="resources/music/pumped.mp3"></audio>
             <div class="image-text">
                 <div class="flowout"></div>
                 <p>
@@ -63,7 +75,7 @@
             <div class="image-frame" onmouseover="playMusic(this)" onmouseleave="stopMusic(this)">
                 <img src="http://via.placeholder.com/350x150">
             </div>
-            <audio src="resources/music/Calm-music-for-kids.mp3"></audio>
+            <audio src="resources/music/pumped.mp3"></audio>
             <div class="image-text">
                 <div class="flowout"></div>
                 <p>
@@ -77,13 +89,12 @@
             <div class="image-frame" onmouseover="playMusic(this)" onmouseleave="stopMusic(this)">
                 <img src="http://via.placeholder.com/350x150">
             </div>
-            <audio src="music/Calm-music-for-kids.mp3"></audio>
+            <audio src="resources/music/pumped.mp3"></audio>
             <div class="image-text">
                 <div class="flowout"></div>
                 <p>
                     bye cruel World
-                    <br>
-                    How are you today i am doing great, thas    wonderfull said the bunny.
+                    <br> How are you today i am doing great, thas wonderfull said the bunny.
                 </p>
             </div>
         </div>
@@ -92,7 +103,7 @@
             <div class="image-frame" onmouseover="playMusic(this)" onmouseleave="stopMusic(this)">
                 <img src="http://via.placeholder.com/350x150">
             </div>
-            <audio src="music/Calm-music-for-kids.mp3"></audio>
+            <audio src="resources/music/pumped.mp3"></audio>
             <div class="image-text">
                 <div class="flowout"></div>
                 <p>
