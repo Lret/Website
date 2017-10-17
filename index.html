@@ -7,12 +7,23 @@
     <script src="scripts/small.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/color.css">
+    <link rel="stylesheet" type="text/css" href="css/ocean.css">
     
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 </head>
 
 <body>
-
+    
+    <!-- Experimental Wave -->
+    <div class="ocean">
+        <div class="aqaurium">
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <div class="sea"></div>
+    </div>
+    <!-- Experimental Wave END -->
+    
     <header>
         <nav>
             <div class="menu">
@@ -43,7 +54,7 @@
     <br><br><br>
 
     
-    <div class="example-block">
+    <div class="example-block squish">
         <p class="example-class">Hello</p>
     </div>
     
@@ -88,7 +99,7 @@
                     <div class="flowout"></div>
                     <p>
                         Hello World
-                        <br> How are you today i am doing great, thas wonderfull said the bunny.
+                        <br> The all float how are you today i am doing great, thas wonderfull said the bunny.
                     </p>
                 </div>
             </div>
@@ -130,6 +141,25 @@
         <a class="icon" href="facebook.com" target="_blank"><img src="resources/images/icons/facebook.svg"></a>
            
     </footer>
+    
+    <!-- Experimental Goo - ->
+    <svg>
+      <defs>
+        <filter id="goo">
+                            <!-- blur spread - ->
+          <feGaussianBlur in="SourceGraphic" stdDeviation="6.5" 10 result="blur"/>
+                            <!-- blur amount - ->
+          <feColorMatrix in="blur" type="matrix" mode="matrix" result="blur" 
+                         values="   1 0 0 0 0
+                                    0 1 0 0 0
+                                    0 0 1 0 0
+                                    0 0 0 10 -8"/> //19 -9
+                            <!-- Re add the real render- ->
+          <feBlend in="SourceGraphic" in2="blur" operator="atop/>
+        </filter>
+      </defs>
+    </svg>
+    <!-- Experimental Goo END -->
 
 </body>
 

@@ -1,0 +1,89 @@
+//html, body { height: 100%; bottom: 0px; }
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  // background:#B7E8EB;
+}
+
+.ocean { 
+  //height: 100%;
+  height: calc(100%);
+  width: 100%;
+  //position: absolute;
+    position:fixed; 
+  top: 200px; /*Set offset*/  
+  z-index: -5;
+
+    overflow: hidden;
+
+}
+
+.aqaurium{
+    position: relative;
+    //height: 10%; /*Wave position*/
+    
+    //top: 30px;
+    height: 100px; /*Wave height / modulo */
+    //background-color: red;
+}
+
+.wave {
+  background: url(wave.svg) repeat-x; 
+    background-position: bottom;
+    background-size: contain;
+    
+  position: absolute;
+  //top: 100px;
+  width: 200%;
+  width: 3200px; /*Needed for xscrolling*/
+    //width: 100vw;
+    height: 100%;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  //transform: translate3d(0, 0, 0);
+    
+    transform-origin: bottom;
+    bottom: 0px;
+    
+
+}
+
+.wave:nth-of-type(2) {
+  //top: 0px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+  
+}
+
+.sea{
+    //box-sizing: content-box;
+    
+    //top: inherit;
+    
+    //top: 4px; /*small fix?*/
+    //position: static; /*not sure if this needed*/
+    
+    //top: 34%;
+    height : 100%;
+    //bottom: 0px;
+    
+    width: 100%;
+    background: #015871;
+    //position: absolute;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+      transform: scale3d(1,1,1);
+  }
+  50% {
+      transform: scale3d(1,0.8,1);
+  }
+}

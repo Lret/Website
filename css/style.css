@@ -1,4 +1,5 @@
             /*** Reset useragent ***/
+html, body { height: auto;}
 ul{
     -webkit-margin-before: 0px;
     -webkit-margin-after: 0px;
@@ -246,7 +247,8 @@ nav{
     position: absolute;
     
     /*TODO : Fix miniscreen balls*/
-    top: 60px;
+    top: 25%;
+    //top: 60px;
     //top: 48%;
     right: calc(50% - 20px);
     z-index: -1;
