@@ -1,4 +1,6 @@
-            /*** Reset useragent ***/
+  /*/////////////////////////////////////
+ ///////   Reset user Agent    /////////
+/////////////////////////////////////*/
 html, body { height: auto;}
 ul{
     -webkit-margin-before: 0px;
@@ -8,7 +10,10 @@ ul{
     -webkit-padding-start: 0px;
 }
 
-            /*** Main Content***/
+  /*/////////////////////////////////////
+ ///////   Top/Main content    /////////
+/////////////////////////////////////*/
+
 body {
    font-family: 'Varela Round', sans-serif;
     margin: 0px;
@@ -18,7 +23,7 @@ body {
 nav{
     left: 2%;
     align-self: center;
-    z-index: 100;
+    z-index: 2;
     width: 100%;
     position: fixed;
     //background-color: rgba(250, 250, 250, 1);
@@ -38,6 +43,10 @@ nav{
     min-height: 580px;
 }
 
+  /*/////////////////////////////////////
+ ///////////     header    /////////////
+/////////////////////////////////////*/
+
 .header-image{
     width: 100%;
     overflow: hidden;
@@ -47,6 +56,10 @@ nav{
     border-radius: 20px;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
+
+  /*/////////////////////////////////////
+ //////////     Menu bar    ////////////
+/////////////////////////////////////*/
 
 .menu{
     display: flex;
@@ -95,6 +108,10 @@ nav{
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
 
+  /*/////////////////////////////////////
+ ///////    Hamburger menu    //////////
+/////////////////////////////////////*/
+
 .hamburger-menu {
 	width: 40px;
 	height: 40px;
@@ -125,7 +142,8 @@ nav{
 }
 
 .hamburger-menu label span{
-    background-color: crimson;
+    //background-color: crimson;
+    background-color: deepskyblue;
     width: 100%;
     height: 6px;
     display: block;
@@ -141,6 +159,62 @@ nav{
 	background: gray;
 }
 
+  /*/////////////////////////////////////
+ ////////   Lightbox/Form    ///////////
+/////////////////////////////////////*/
+
+#lightboxTarget{
+    box-sizing:border-box;
+    display: block;
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 10%;
+    
+    background: rgba(10,10,10,0.65);
+    z-index: 10;
+}
+#lightboxTarget:target{
+    display: block;
+}
+
+.contact-form{
+    background: rgba(250,250,250,0.9);
+    //width: 100%;
+    //height: 100%;
+    
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    top: 10px;
+    
+    padding: 8px 6px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    
+}
+.closebtn{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    width: 20px;
+    
+    transition: color 350ms;
+}
+.closebtn:hover{
+    color: deepskyblue;
+    
+}
+
+  /*/////////////////////////////////////
+ ///////////    Example    /////////////
+/////////////////////////////////////*/
+
 .example-block{  
     background: rgba(200,200,200,0.2);
     //border-radius: 6px;
@@ -153,13 +227,18 @@ nav{
     
     margin: 10px 20px;
     
-        box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
 .example-class{
     text-align: center;
     
     flex-basis: 400px;
 }
+
+  /*/////////////////////////////////////
+ ////////   Image Gallery    ///////////
+/////////////////////////////////////*/
+
 .image-box{
     //box-sizing: border-box;
     
@@ -255,6 +334,9 @@ nav{
     
     box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.1);
 }
+
+
+
 .menu-list{
     display: flex;
     flex-direction: column;
@@ -316,9 +398,15 @@ footer a img {
 
 }
 
-
+  /*/////////////////////////////////////
+ /////    .Responsive Tablet.    ///////
+/////////////////////////////////////*/
 
 @media only screen and (min-width: 480px) {
+    
+  /*/////////////////////////////////////
+ ///////    Tablet Menu bar    /////////
+/////////////////////////////////////*/
     .menu-list{
         //display: flex;
         flex-direction: row;
@@ -371,6 +459,19 @@ footer a img {
     }
 }
 
+  /*/////////////////////////////////////
+ /////   .Responsive Desktop.    ///////
+/////////////////////////////////////*/
+
 @media only screen and (min-width: 1020px) {
     /*TODO: design something for this*/
 }
+
+
+
+  /*/////////////////////////////////////
+ ////////    Comment Block    //////////
+/////////////////////////////////////*/
+
+/* comment block above use this to create sections 
+(tip use 'Ins to overwrite the //')*/

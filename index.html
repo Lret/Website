@@ -3,7 +3,7 @@
 <!-- TODO: ALT texts add-->
 <head>
     <meta charset="UTF-8">
-    <title>Music Box</title>
+    <title>SoundWWWaveS</title>
     <script src="scripts/small.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/color.css">
@@ -15,6 +15,7 @@
 <body>
     
     <!-- Experimental Wave -->
+    <div class="sun"><img src="../Website/resources/images/retroSun.svg"></div>
     <div class="ocean">
         <div class="aqaurium">
             <div class="wave"></div>
@@ -23,6 +24,23 @@
         <div class="sea"></div>
     </div>
     <!-- Experimental Wave END -->
+    
+    <!-- Form -->
+    
+    <!-- Anchor in Anchor is illega, therefor the onclick (href simulation). AND event.stopPropagation() prevent the LIGHTBOX from closing when there is clicked inside the LIGTHBOX (it stops the bubbling from the previous onclick element.)-->
+    <div id="lightboxTarget" onclick="window.location='#';">
+        <div class="contact-form" onclick= "event.stopPropagation();">
+            <h2>Hello Form</h2>
+            <hr>
+            <p>
+                Lorizzle ipsum dolor sit we gonna chung, black elit. Nullizzle shizzle my nizzle crocodizzle velizzle, cool volutpizzle, suscipizzle quis, bow wow wow bizzle, dang. Pellentesque dang tortor. Sizzle erizzle. Boom shackalack izzle dope pizzle turpis tempizzle shit. Yippiyo pellentesque nibh izzle crackalackin. Ass yo sheezy. Pellentesque tellivizzle rhoncizzle we gonna chung. In hac habitasse doggy dictumst. Daahng dawg dapibus. Fo shizzle tellizzle izzle, pretium crunk, mattizzle sheezy, eleifend vitae, nunc. Check out this suscipizzle. Break it down semper da bomb purus.
+            </p>
+            <hr>
+            <a href="#" class="closebtn">×</a>
+        </div>
+    </div>
+    
+    <!-- FormEnd -->
     
     <header>
         <nav>
@@ -55,7 +73,7 @@
 
     
     <div class="example-block squish">
-        <p class="example-class">Hello</p>
+        <p class="example-class">Hello Sea</p>
     </div>
     
     <div class="main-body">
@@ -132,12 +150,16 @@
                 </div>
             </div>
 
+            <div class="image-item">
+                <a href="#lightboxTarget" class="lightboxTrigger">Form</a>
+            </div>
+            
         </div>
 
     </div>
 
     <footer>
-        <a class="contact_us" href="#" target="_blank">Contact Us</a>
+        <a class="contact_us" href="#lightboxTarget">Contact Us</a>
         <a class="icon" href="facebook.com" target="_blank" viewBox="0 0 100 100"><img src="resources/images/icons/facebook.svg"></a>
            
     </footer>
