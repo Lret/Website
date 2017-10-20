@@ -4,7 +4,13 @@ body {
   // background:#B7E8EB;
 }
 .sun{
-    position: absolute;
+    /*  use for sun / horizon effect  */
+    //position: fixed;
+    /*  use for sun upgoing effect  */
+    position: absolute; 
+    height: 400px; /*used for gradient effect offset (more is a longer gradient)*/
+    
+    
     right: 0px;
     left: 0px;
     top: 0%;
@@ -29,17 +35,25 @@ body {
     
 }
 .sun img{
+    /*  use for sun upgoing effect  */
+    position: fixed;
     height: auto;
     width: 100%;
 }
 .ocean { 
-  //height: 100%;
-  height: calc(100%);
-  width: 100%;
-  //position: absolute;
-    position:fixed; 
-  top: 200px; /*Set offset*/  
-  z-index: -5;
+    /*  use for sun / horizon effect  */
+    position: absolute;
+    
+    //position:fixed;
+    
+    //height: 100%;
+    //height: 100%;
+    //height: auto;
+    width: 100%;
+ 
+    top: 300px; /*Set offset of waves*/  
+    z-index: -5;
+    bottom: 0px;
 
     overflow: hidden;
 
