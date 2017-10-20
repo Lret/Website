@@ -21,21 +21,64 @@ body {
     padding: 0px;
 
 }
-nav{
 
-    align-self: center;
-    z-index: 2;
-    width: 100%;
-    position: fixed;
-    //background-color: rgba(250, 250, 250, 1);
-/*    background-color: rgba( 200, 200, 200, 0.4);*/
-    //border-radius: 10px;
-    border-radius: 4px;
-/*    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);*/
-    
-    background: #F668B6;
 
+
+nav ul {
+    margin: 0;
+    padding: 0;
 }
+nav ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #F668B6;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+
+    text-decoration: underline;
+}
+
+/* When the screen is less than 480 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+
 
 .main-body{
     //border-radius: 20px;
@@ -507,7 +550,14 @@ footer a img {
 /////////////////////////////////////*/
 
 @media only screen and (min-width: 480px) {
-
+    .topnav a:not(:first-child) {
+        display: block;
+    }
+    
+    /* Hide the link that should open and close the topnav on small screens */
+    .topnav a.icon {
+        display: none;
+    }
     }
 
     
@@ -578,11 +628,8 @@ footer a img {
 
 @media only screen and (min-width: 1020px) {
     /*TODO: design something for this*/
-            nav {
-        background: #F668B6;
 
-    }
-
+    
 }
 
 
