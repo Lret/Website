@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Contact</title>
     
+    <script src="../scripts/menu.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/color.css">
     <link rel="stylesheet" type="text/css" href="../css/ocean.css">
@@ -48,7 +50,7 @@
             
             <div class="form-body">
 
-                <form action="#" method="get" id="contact-form">
+                <form action="#thankYouMessage" method="get" id="contact-form">
                     <h4>Contact person</h4>
                     <label>
                         <input type="radio" name="sendTo" value="Edy">
@@ -94,34 +96,54 @@
         </div>
     </div>
     
+    <!-- thank you for your message message -->
+    
+    <div id="thankYouMessage" onclick="window.location='#';">
+        <div class="contact-form" onclick= "event.stopPropagation();">
+
+            <div class="form-header">
+                
+                <h2>
+                    <img height="26px" width=" 26px" src="../resources/images/mail.svg">
+                    Contact us
+                </h2>
+                <a href="#" class="closebtn">×</a>
+            </div>     
+            <hr>
+            <div class="thankYou-body">
+                
+                <h3> Thank you for your message!!! </h3>
+            </div>
+            
+        </div>
+    </div>
+    
     <!-- FormEnd -->
     
+    <!-- Header -->
+    
     <header>
-        <nav>
-            <div class="menu">
-                <div class="header-box justify-start">
-                    <img class="icon-small" src="http://via.placeholder.com/50x50">
-                    <img class="banner" src="http://via.placeholder.com/250x50">
-
-                    <div class="hamburger-menu">
-                        <input type="checkbox" value="1" id="hamburger-menuInput" onclick="toggleHamburg(this)">
-                        <label for="hamburger-menuInput">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </label>
-                    </div>
-                </div>
-
-                <ul class="menu-list hidden-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="html/main.html">Main</a></li>
-                    <li><a href="html/about.html">About Us</a></li>
-                    <li><a href="html/contact.html">Contact</a></li>
-                </ul>
-            </div>
+        <nav class="topnav" id="navBar">
+        <a href="#home">Home</a>
+        <ul> 
+            <a>Pages</a>
+            <li>
+                <a href="#news">News</a>
+            </li>
+            <li>
+                <a href="#More">More</a>
+            </li>
+        </ul>
+        <a href="#about">About Us</a>
+        <a href="#image_gallery">Image Gallery</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
     </header>
+    
+    
+    <!-- Header End -->
+    
+    <!-- Main Page -->
     
     <br>
     
@@ -196,22 +218,67 @@
         
         <section>
             <h2>What we do.</h2>
+            <hr>
             <div class="iframe-frame">
                 <iframe src="https://www.youtube.com/embed/q6T9-8KRgHg?ecver=1" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
         
         <footer>
-            <h2>Visit us.</h2>
+            <h2>Visit us on workdays.</h2>
+            <hr>
             <div class="iframe-frame">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9893.700304695036!2d5.2869727!3d51.6886659!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5d7ba4e903f8f190!2sAvans+Hogeschool!5e0!3m2!1sen!2snl!4v1508345270606" width="auto" height="auto" frameborder="0" allowfullscreen></iframe>
             </div>
             
             <br>
-            <div>
-                <h2>Work days</h2>
-                <br>
+                
+            <table>
+                <tbody>
+                    <tr>
+                        <th><i class="fa fa-calendar" aria-hidden="true"></i></th>
+                        <th>Edy</th>
+                        <th>Luigi</th>
+                    </tr>
+                    <tr>
+                        <td>Mon</td>
+                        <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
+                        <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Tue</td>
+                        <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                        <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Wed</td>
+                        <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
+                        <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Thu</td>
+                        <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                        <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Fri</td>
+                        <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                        <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Sat</td>
+                        <td><i class="fa fa-check-square-o" aria-hidden="true"></i></td>
+                        <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Sun</td>
+                        <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
+                        <td><i class="fa fa-square-o" aria-hidden="true"></i></td>
+                    </tr>
+                </tbody>
+            </table>
 
+<!--
                 <table>
                         <th></th> <th>Mon</th> <th>Thu</th> <th>Wen</th> <th>Thu</th> <th>Fri</th>
                     <tr> 
@@ -222,7 +289,8 @@
                     </tr>
 
             </table>
-            </div>
+-->
+                
         </footer>
         
     </div>
