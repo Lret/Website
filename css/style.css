@@ -105,11 +105,11 @@ input:checked ~ span:nth-last-child(2) {
 input:checked ~ ul {
 
     transform: translate(0%, 400px);
-    transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 input:not(checked) ~ul {
     transform: translate(0%, -400px);
-    transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
 ul {
@@ -146,6 +146,7 @@ li {
     input:not(:checked) ~ ul {
         display: block;
         transform: translate(0%, 400px);
+
     }
     ul {
         width: 100%;
