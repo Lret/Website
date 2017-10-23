@@ -1,4 +1,4 @@
-.contact-body{
+.about-body{
     padding: 5%;
     
     //border-radius: 4px;
@@ -30,13 +30,13 @@
     "foot foot foot foot"; 
 }
 
-.contact-body > *{
+.about-body > *{
     background-color: rgba(220,220,220,0.1);
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
     padding: 30px;
 }
 
-.contact-body > div{
+.about-body > div{
     grid-area: header;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -54,33 +54,33 @@
     height: 75px;
 }
 
-.contact-body > main:nth-of-type(1) {
+.about-body > main:nth-of-type(1) {
     grid-area: main1;
 }
 
-.contact-body > aside:nth-of-type(1){
+.about-body > aside:nth-of-type(1){
     grid-area: aside1;
 }
 
-.contact-body > main:nth-of-type(2){
+.about-body > main:nth-of-type(2){
     grid-area: main2;
 }
 
-.contact-body > aside:nth-of-type(2){
+.about-body > aside:nth-of-type(2){
     grid-area:  aside2;
 }
 
-.contact-body > section{
+.about-body > section{
     grid-area: section;
 }
 
-.contact-body > footer{
+.about-body > footer{
     grid-area: foot;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
 
-.contact-body > aside > img{
+.about-body > aside > img{
     position: -webkit-sticky;
     position: sticky;
     height: auto;
@@ -93,11 +93,11 @@
 
 }
 
-.contact-body h2{
+.about-body h2{
     text-align: center;
     margin: 0px;
 }
-.contact-body h2 + p{
+.about-body h2 + p{
     text-align: center;
     margin-top: 0px;
 }
@@ -188,7 +188,7 @@ hr{
  ////////   Desktop/tablet    //////////
 /////////////////////////////////////*/
 @media only screen and (min-width: 480px) {
-    .contact-body{
+    .about-body{
         grid-gap: 50px 0px;
         grid-template-areas: 
         "header header header header"
@@ -202,7 +202,7 @@ hr{
         "foot foot foot foot";
     }
     
-    .contact-body > aside{
+    .about-body > aside{
         //border-width: 40px;
         //border-radius: 100px;
         
@@ -213,7 +213,7 @@ hr{
         text-align: center;
     }
     
-    /*.contact-body > aside > img{
+    /*.about-body > aside > img{
         
         position: -webkit-sticky;
         position: sticky;

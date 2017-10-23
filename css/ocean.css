@@ -1,4 +1,4 @@
-//html, body { height: 100%; bottom: 0px; }
+html, body { min-height: 100vh; bottom: 0px; }
 body {
   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
   // background:#B7E8EB;
@@ -10,7 +10,7 @@ body {
     position: absolute; 
     height: 400px; /*used for gradient effect offset (more is a longer gradient)*/
     
-    
+    //width: auto;
     right: 0px;
     left: 0px;
     top: 0%;
@@ -30,16 +30,46 @@ body {
     background: -moz-linear-gradient(top, #ff5db1 0%, #02c8ff 77%, #f1fc5d 100%);
     background: -webkit-linear-gradient(top, #ff5db1 0%, #02c8ff 77%, #f1fc5d 100%);
     background: linear-gradient(to bottom, #ff5db1 0%, #02c8ff 77%, #f1fc5d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#f1fc5d', GradientType=0);*/
-    
-    
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#f1fc5d', GradientType=0);*/ 
 }
 .sun img{
     /*  use for sun upgoing effect  */
     position: fixed;
     height: auto;
     width: 100%;
+    
+    //filter: hue-rotate(45deg);
+    
 }
+.sun-icon{
+    /*
+    background: url(../resources/images/retroSun.svg); 
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;   
+    */
+    
+    /*
+    background: #00ff00 url(../resources/images/retroSun.svg) no-repeat fixed center;
+    */
+    /*TODO FIX THISS FKING GLITCH*/
+    position: absolute;
+    
+    position: fixed;
+    background-position: center;
+    
+  height: 100%;
+  width: 100%;
+  //width: 100vw !important;
+  //display: block;
+  background: url(../resources/images/retroSun.svg);
+     background-repeat:no-repeat;
+    //background-size: 100% 100%;
+    background-size:contain;
+ z-index: -9;
+    filter: hue-rotate(20deg)
+}
+
 .ocean { 
     /*  use for sun / horizon effect  */
     position: absolute;
@@ -67,7 +97,29 @@ body {
     height: 100px; /*Wave height / modulo */
     //background-color: red;
 }
+/*
+.wave {
+  background: url(../resources/images/wave.svg) repeat-x; 
+    //background-position: 0px bottom;
+    background-size: contain;
+    //background-size: 1600px 100%;
+    
+//background-size: auto;
+  position: absolute;
+  //top: 100px;
+  width: 100%;
+  //width: 3200px; /*Needed for xscrolling* /
+    //width: 100vw;
+   //height: 100%;
+  animation: wave 4s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+    
+transform-origin: bottom;
+bottom: 0px;
+    
 
+}
+*/
 .wave {
   background: url(../resources/images/wave.svg) repeat-x; 
     background-position: bottom;

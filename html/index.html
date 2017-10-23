@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>SoundWWWaveS</title>
-    <script src="scripts/sound.js"></script>
-    <script src="scripts/menu.js"></script>
+    <script src="../scripts/small.js"></script>
+    <script src="../scripts/menu.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/color.css">
-    <link rel="stylesheet" type="text/css" href="css/ocean.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/color.css">
+    <link rel="stylesheet" type="text/css" href="../css/ocean.css">
     
     <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -19,7 +18,7 @@
 <body>
     
     <!-- Experimental Wave -->
-    <div class="sun"><img src="../Website/resources/images/retroSun.svg"></div>
+    <div class="sun"><img src="../resources/images/retroSun.svg"></div>
     <div class="ocean">
         <div class="aqaurium">
             <div class="wave"></div>
@@ -38,7 +37,7 @@
             <div class="form-header">
                 
                 <h2>
-                    <img height="26px" width=" 26px" src="resources/images/mail.svg">
+                    <img height="26px" width=" 26px" src="../resources/images/mail.svg">
                     Contact us
                 </h2>
                 <a href="#" class="closebtn">×</a>
@@ -49,7 +48,7 @@
             
             <div class="form-body">
 
-                <form action="#thankYouMessage" method="get" id="contact-form">
+                <form action="#" method="get" id="contact-form">
                     <h4>Contact person</h4>
                     <label>
                         <input type="radio" name="sendTo" value="Edy">
@@ -95,48 +94,28 @@
         </div>
     </div>
     
-    <!-- thank you for your message message -->
-    
-    <div id="thankYouMessage" onclick="window.location='#';">
-        <div class="contact-form" onclick= "event.stopPropagation();">
-
-            <div class="form-header">
-                
-                <h2>
-                    <img height="26px" width=" 26px" src="resources/images/mail.svg">
-                    Contact us
-                </h2>
-                <a href="#" class="closebtn">×</a>
-            </div>     
-            <hr>
-            <div class="thankYou-body">
-                
-                <h3> Thank you for your message!!! </h3>
-            </div>
-            
-        </div>
-    </div>
-    
-    
     <!-- FormEnd -->
     
     <!-- Header -->
     
     <header>
-        <nav class="topnav" id="navBar">
-        <a href="index.html">Home</a>
-        <ul> 
-            <a href="html/pages.html">Pages</a>
-            <li>
-                <a href="html/news.html">News</a>
-            </li>
-            <li>
-                <a href="html/more.html">More</a>
-            </li>
+         <nav>
+        <!--    Navigation Menu -->
+        <input type="checkbox" />
+
+<!--        hamburger Bar-->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Text One</a></li>
+            <li><a href="index.html">Text Two</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="index.html">Image Gallery</a></li>
         </ul>
-        <a href="html/about.html">About Us</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </nav>
+    </nav>
     </header>
 
     <!-- Header End -->
@@ -145,8 +124,9 @@
     
     <br>
     
-    <div class="welcom-block">
-        <h2>Hello Sea</h2>
+    <div class="example-block">
+        <p class="example-class">Hello Sea</p>
+        <p id="clock" style="text-align: center; padding-bottom: 10px;"></p>
     </div>
     
     <div class="main-body">
@@ -229,7 +209,7 @@
 
     <footer>
         <a class="contact_us" href="#lightboxTarget">Contact Us</a>
-        <a class="icon" href="facebook.com" target="_blank" viewBox="0 0 100 100"><img src="resources/images/icons/facebook.svg"></a>
+        <a class="icon" href="facebook.com" target="_blank" viewBox="0 0 100 100"><img src="../resources/images/icons/facebook.svg"></a>
            
     </footer>
     
