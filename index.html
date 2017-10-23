@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SoundWWWaveS</title>
-    <script src="scripts/small.js"></script>
-    <script src="scripts/countDown.js"></script>
+    <script src="scripts/sound.js"></script>
     <script src="scripts/menu.js"></script>
     
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -49,7 +48,7 @@
             
             <div class="form-body">
 
-                <form action="#" method="get" id="contact-form">
+                <form action="#thankYouMessage" method="get" id="contact-form">
                     <h4>Contact person</h4>
                     <label>
                         <input type="radio" name="sendTo" value="Edy">
@@ -95,24 +94,46 @@
         </div>
     </div>
     
+    <!-- thank you for your message message -->
+    
+    <div id="thankYouMessage" onclick="window.location='#';">
+        <div class="contact-form" onclick= "event.stopPropagation();">
+
+            <div class="form-header">
+                
+                <h2>
+                    <img height="26px" width=" 26px" src="resources/images/mail.svg">
+                    Contact us
+                </h2>
+                <a href="#" class="closebtn">×</a>
+            </div>     
+            <hr>
+            <div class="thankYou-body">
+                
+                <h3> Thank you for your message!!! </h3>
+            </div>
+            
+        </div>
+    </div>
+    
+    
     <!-- FormEnd -->
     
     <!-- Header -->
     
     <header>
         <nav class="topnav" id="navBar">
-        <a href="#home">Home</a>
+        <a href="index.html">Home</a>
         <ul> 
-            <a>Pages</a>
+            <a href="html/pages.html">Pages</a>
             <li>
-                <a href="#news">News</a>
+                <a href="html/news.html">News</a>
             </li>
             <li>
-                <a href="#More">More</a>
+                <a href="html/more.html">More</a>
             </li>
         </ul>
-        <a href="#about">About Us</a>
-        <a href="#image_gallery">Image Gallery</a>
+        <a href="html/about.html">About Us</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
     </header>

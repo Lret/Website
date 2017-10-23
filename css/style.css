@@ -10,6 +10,13 @@ ul{
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
 }
+/* would have fixed the popup-bodyspace-bottom fix but resets to much styling* /
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*/
 
   /*/////////////////////////////////////
  //////   Header/Navigation    //////////
