@@ -22,81 +22,149 @@ ul{
  //////   Header/Navigation    //////////
 /////////////////////////////////////*/
 
-nav ul {
+body,
+html {
     margin: 0;
     padding: 0;
 }
-nav ul:hover {
-    background: #33a6c1;
-}
-nav ul li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: none;
-}
-nav ul:hover li{
-    display: block;
-}
 
-/* Add a black background color to the top navigation */
-.topnav {
-    background-color: #F668B6;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a, .topnav ul {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+a {
     text-decoration: none;
-    font-size: 17px;
+    color: white;
+
+}
+a:hover {
+    color: #015971;
+    transition: color 0.3s ease;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover{
-    text-decoration: underline;
+nav {
+    display: block;
+    position: relative;
+/*    must be highest z-index */
+    z-index: 10; 
 }
 
-/* When the screen is less than 480 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-
-.topnav a:not(:first-child), .topnav ul {
-    display: none;
+input {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    width: 35px;
+    height: 32px;
+    top: 14px;
+    left: 80%;
+    z-index: 2;
+    opacity: 0;
 }
 
-.topnav a.icon {
-    float: right;
+
+
+input:checked ~ ul {
     display: block;
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media only screen and (max-width: 480px) {
-    .topnav.responsive {
-        position: relative;
-    }
 
-    .topnav.responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
+/* hamburger magic*/
+span {
+    display: block;
+    position: relative;
+    background: white;
+    z-index: 1;
+    width: 33px;
+    height: 4px;
+    margin: 5px;
+    border-radius: 3px;
+    top: 20px;
+    left: 80%;
 
-    .topnav.responsive a{
-        float: none;
+    transform-origin: 4px 0px;
+
+    /*    hamburger cross transition Cubic Bezier timers*/
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+
+span:first-child {
+    transform-origin: 0% 0%;
+}
+
+span:last-child {
+    transform-origin: 0% 100%;
+}
+
+input:checked ~ span {
+
+    transform: rotate(45deg) translate(0px, -1px);
+}
+
+input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2);
+}
+
+input:checked ~ span:nth-last-child(2) {
+
+    transform: rotate(-45deg) translate(0px, -1px);
+}
+
+input:checked ~ ul {
+
+    transform: translate(0%, 400px);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+input:not(checked) ~ul {
+    transform: translate(0%, -400px);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+ul {
+    position: absolute;
+    width: 100%;
+    background: #F768B6;
+    top: -400px;
+/*    display: none;*/
+    margin: 0;
+    padding: 50px;
+    
+    transform-origin: 0% -400px;
+
+
+}
+
+li {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    font-size: 22px;
+}
+
+@media screen and (min-width: 480px) {
+
+
+
+    span {
+        display: none;
+    }
+    input {
+        display: none;
+    }
+    input:not(:checked) ~ ul {
         display: block;
-        text-align: left;
-    }
+        transform: translate(0%, 400px);
 
-    .topnav.responsive ul{
-        float: none;
-        display: flex;
-        display: block;
-        text-align: left;
+    }
+    ul {
+        width: 100%;
+        top: -400px;
+        text-align: center;
         padding: 0px;
-        margin: 0px;
+    }
+    li {
+        display: inline-block;
+        padding: 10px;
+        margin: 10px;
     }
 }
   /*/////////////////////////////////////
