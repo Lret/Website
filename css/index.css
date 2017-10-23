@@ -17,6 +17,7 @@
     padding: 10px;
     
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+        background-color: rgba(51,166,193,0.9);
 }
 
 .welcom-block > h2{

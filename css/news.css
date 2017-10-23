@@ -3,31 +3,41 @@
     
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: minmax(200px, auto);
+    grid-auto-rows: minmax(20px, auto);
     grid-gap: 10px 0px;
     max-width: 960px;
-    margin: 0 auto;
+    //margin: 0 auto;
     
     color:white;
     
     grid-template-areas:
         "top-head top-head top-head top-head"
         "top-img-1 top-img-1 top-img-2 top-img-2"
-        "top-news top-news top-news top-news"
-        "section-head section-head section-head section-head"
-        "section-img-1 section-text-1 section-text-1 section-text-1"
-        "section-img-2 section-text-2 section-text-2 section-text-2"
-        "section-img-3 section-text-3 section-text-3 section-text-3"; 
+        "top-text top-text top-text top-text"
+        "top-footer empty empty empty"
+        
+        
+        "article-head article-head article-head article-head"
+        "section-text-1 section-text-1 section-text-1 section-text-1"
+        "section-text-2 section-text-2 section-text-2 section-text-2"
+        "section-text-3 section-text-3 section-text-3 section-text-3"
+        "section-text-4 section-text-4 section-text-4 section-text-4"; 
 }
 
 .news-body > *{
     background-color: rgba(220,220,220,0.1);
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
     //padding: 30px;
+    
+    //width: 100%;
+    min-height: 100px;
+    background-size: cover;
+    background-position: center;
 }
 
-.news-body > div{
-    grid-area: top-news;
+
+.news-body div:nth-of-type(1){
+    grid-area: top-head;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     
@@ -37,15 +47,94 @@
     text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-align: center;
     
-    height: 75px;
+    //height: 75px;
+    
+        text-align: center;
+    min-height: 50px;
+    //background-color: cadetblue;
+    background-color: rgba(51,166,193,0.9);
 }
 
-.news-body img:nth-of-type(1){
+
+/* head images*/
+.news-body > div:nth-of-type(2){
     grid-area: top-img-1;
+    
+    width: 100%;
+    min-height: 100px;
+    
+    background-image: url(../resources/images/office.jpeg);
+    background-size:cover;
+    
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
-.news-body img:nth-of-type(2){
+.news-body > div:nth-of-type(3){
     grid-area: top-img-2;
+    
+    background-image: url(../resources/images/headerimage.jpg);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
+/*End head images*/
+
+
+
+/* Articles*/
+/* head */
+.news-body > section {
+    grid-area: article-head;
+    text-align: center;
+    min-height: 50px;
+    //background-color: cadetblue;
+        border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: rgba(51,166,193,0.9);
+}
+
+.news-body > div:nth-of-type(4){
+    grid-area: top-text;
+}
+
+/*Top articles footer*/
+.news-body > div:nth-of-type(5){
+    grid-area: top-footer;
+    margin: 0px 0px 50px 0px;
+    padding: 0px;
+    min-height: 10px; 
+}
+
+/* Articles*/
+
+.news-body > article{
+    display: flex;
+    //align-items: center;
+    padding: 10px;  
+    
+}
+
+.news-body > article img{
+    margin-right: 10px;
+    align-self: center;
+}
+
+.news-body > article:nth-of-type(1){
+    grid-area: section-text-1;
+}
+
+.news-body > article:nth-of-type(2){
+    grid-area: section-text-2;
+}
+
+.news-body > article:nth-of-type(3){
+    grid-area: section-text-3;
+}
+
+.news-body > article:nth-of-type(4){
+    grid-area: section-text-4;
+}
+
+
 
 
 
@@ -62,9 +151,26 @@
 /////////////////////////////////////*/
 @media only screen and (min-width: 480px) {
     .news-body{
-        grid-gap: 50px 0px;
-        grid-template-areas: 
-        "top-news top-news top-news top-news";
+        margin: auto;
+        grid-gap: 10px 0px;
+        grid-template-areas:
+        "top-head top-head top-head top-head"
+        "top-img-1 top-img-1 top-text  top-text"
+        "top-img-2 top-img-2 top-text top-text"
+        "top-footer top-footer top-footer top-footer"
+        
+        
+        "article-head article-head article-head article-head"
+        "section-text-1 section-text-1 section-text-2 section-text-2"
+        "section-text-3 section-text-3 section-text-4 section-text-4";
+    }
+
+    .news-body > div:nth-of-type(4){
+        padding: 10px;
+    }
+    .news-body > div:nth-of-type(5){
+        padding: 10px;
+        text-align: center
     }
 
 }
