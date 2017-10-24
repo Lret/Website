@@ -188,7 +188,7 @@
 
   }
 
-  @media screen and (min-device-width: 480px) and min-width : 480px {
+  @media screen and (min-width: 480px) {
       nav ul {
 
           padding-top: 50px;
@@ -207,7 +207,7 @@
 
   }
 
-  @media screen and (min-device-width: 1020px) and min-width : 1020px {
+  @media screen and (min-width: 1020px) {
 
 
       .pageTitle {

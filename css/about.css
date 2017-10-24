@@ -153,7 +153,7 @@ hr{
   /*/////////////////////////////////////
  ////////   Desktop/tablet    //////////
 /////////////////////////////////////*/
-@media only screen and (min-device-width: 480px) and min-width : 480px{
+@media only screen and (min-width : 480px) {
     .about-body{
         grid-gap: 50px 0px;
         grid-template-areas: 

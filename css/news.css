@@ -135,7 +135,7 @@
   /*/////////////////////////////////////
  ////////   Desktop/tablet    //////////
 /////////////////////////////////////*/
-@media only screen and (min-device-width: 480px) and min-width : 480px {
+@media only screen and (min-width : 480px) {
     .news-body{
         margin: auto;
         grid-gap: 10px 0px;
