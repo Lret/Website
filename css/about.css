@@ -1,14 +1,6 @@
 .about-body{
     padding: 5%;
     
-    //border-radius: 4px;
-    //background-color: rgba(220,220,220,0.1);
-    //box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-    
-    //margin: 30px;
-    //margin-bottom: 0px;
-    //min-height: 580px;
-    
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-auto-rows: minmax(200px, auto);
@@ -85,10 +77,8 @@
     position: sticky;
     height: auto;
     width: 100%;
-    //width: 100px;
     border-radius: 50px;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-    //top 10%;
     top: 60px;
 
 }
@@ -107,19 +97,10 @@
     
     position: relative;
     width: 100%;
-    //height: 0;
     padding-top: 66.6%; /* This is your aspect ratio */ 
 }
 
 .iframe-frame > iframe{
-    /*
-    margin-top: 10px;
-    border-radius: 5px;
-    box-shadow: 1px -1px 2px rgba(0,0,0,0.2);
-    width: 100%;
-    //height: 100%;
-    min-height: 100%;
-    */
     
     position: absolute;
     top:      0;
@@ -140,8 +121,6 @@ table {
 }
 
 th {
-    //background-color: #4CAF50;
-    //background-color: rgba(246, 104, 182, 0.9);
     background-color: rgba(51,166,193,0.9);
     color: white;
 }
@@ -159,10 +138,6 @@ tr:nth-child(even){
 tr *{
     text-align: center;
 }
-
-/*tr :not(*:nth-child(1)){
-    text-align: center;
-}*/
 
 
 hr{
@@ -203,8 +178,6 @@ hr{
     }
     
     .about-body > aside{
-        //border-width: 40px;
-        //border-radius: 100px;
         
         border-bottom-right-radius: 100px;
         border-top-right-radius: 100px;
@@ -212,19 +185,5 @@ hr{
         padding: 20%;
         text-align: center;
     }
-    
-    /*.about-body > aside > img{
-        
-        position: -webkit-sticky;
-        position: sticky;
-        height: 100px;
-        width: auto;
-        //width: 100px;
-        border-radius: 50px;
-        box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-        //top 10%;
-        top: 60px;
-        
-    }*/
 
 }
