@@ -1,15 +1,12 @@
-
   /*/////////////////////////////////////
  ///////////    Welcom     /////////////
 /////////////////////////////////////*/
 
 .welcom-block{  
     background: rgba(200,200,200,0.2);
-    //border-radius: 6px;
     border-radius: 4px;
     box-sizing: border-box;
-    
-    //display: flex;
+
     align-content: center;
     justify-content: center;
     
@@ -17,7 +14,7 @@
     padding: 10px;
     
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-        background-color: rgba(51,166,193,0.9);
+    background-color: rgba(51,166,193,0.9);
 }
 
 .welcom-block > h2{
@@ -31,14 +28,13 @@
  ////////   Image Gallery    ///////////
 /////////////////////////////////////*/
 
-.image-box{
-    //box-sizing: border-box;
-    
+.image-box{ 
     display: flex;
     align-content: space-around;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .image-item{
     background: rgba(200,200,200,0.2);
     border-radius: 6px;
@@ -49,29 +45,28 @@
     margin: 20px;
     overflow: hidden;
     
-    //display:block;
-    //overflow:auto;
     min-height: 50px;
     height: 100%;
     position: relative;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
+
 .image-frame{
     width: auto;
     height: auto;
     overflow: hidden;
-    //height: auto;
-    
 }
+
 .image-frame :hover{
     height: 100%;
 }
+
 .image-item img{
     width: 100%;
     height: auto;
     
     transition: transform 2s;
-        box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
 }
 
 .image-frame img{
@@ -82,27 +77,22 @@
 }
 
 .image-item img:hover{
-    //width: 100%;
-    //height: auto;
     transform: scale(1.4);
     transition: transform 2s; 
     
 }
+
 .image-text{
     margin: 0px 8px 10px 8px;
     overflow: hidden;
     
 }
+
 .image-text p{
-    //box-sizing: content-box;
     height: 5px;
-    transition: 
-    //padding-bottom:15px;
-    //white-space: nowrap;
-    //text-overflow: ellipsis;
-    
     transition: height 1s;
 }
+
 .image-text p:hover{
     max-height: 100%;
     height: 100px;
@@ -114,59 +104,11 @@
     background: rgba(220,220,220,1);
     height: 40px;
     width: 40px;
-    //border: 1px solid rgba(20,20,20,0.5);
     position: absolute;
     
-    /*TODO : Fix miniscreen balls*/
     top: 25%;
-    //top: 60px;
-    //top: 48%;
     right: calc(50% - 20px);
     z-index: -1;
     
     box-shadow: 0px 0px 0px 2px rgba(0,0,0,0.1);
 }
-
-
-
-.menu-list{
-    display: flex;
-
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-
-
-}
-/*
-.menu-list ul {
-
-}
-.menu-list li{
-    
-    text-align: center;
-    display: block;
-    text-decoration: none;
-
-
-    margin: 0px;
-    padding: 15px 75px;
-    //border: 1px solid black;
-    //border-radius: 4px;
-    border-radius: 2px;
-    
-/*    box-shadow: 0px 1px 2px rgba(0,0,0,0.2);* /
-}
-.menu-list li:hover{
-    background-color: rgba(250,250,250,0.6);
-}
-.menu-list li a{
-    
-    color: white;
-    text-decoration: none;
-}
-
-.hidden-list{
-    display: none;
-}
-*/

@@ -12,23 +12,16 @@ ul{
     -webkit-margin-end: 0px;
     -webkit-padding-start: 0px;
 }
-/* would have fixed the popup-bodyspace-bottom fix but resets to much styling* /
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-*/
-
-  /*/////////////////////////////////////
- //////   Header/Navigation    //////////
-/////////////////////////////////////*/
 
 body,
 html {
     margin: 0;
     padding: 0;
 }
+
+  /*/////////////////////////////////////
+ //////   Header/Navigation    //////////
+/////////////////////////////////////*/
 
 nav a {
     text-decoration: none;
@@ -43,7 +36,6 @@ nav a:hover {
 nav {
     display: block;
     position: relative;
-/*    must be highest z-index */
     z-index: 10; 
 }
 
@@ -58,8 +50,6 @@ nav input {
     z-index: 2;
     opacity: 0;
 }
-
-
 
 nav input:checked ~ ul {
     display: block;
@@ -126,7 +116,7 @@ nav ul {
     width: 100%;
     background: #F768B6;
     top: -400px;
-/*    display: none;*/
+    /*    display: none;*/
     margin: 0;
     padding: 50px;
     
@@ -143,8 +133,6 @@ nav li {
 }
 
 @media screen and (min-width: 480px) {
-
-
 
     nav span {
         display: none;
@@ -169,6 +157,7 @@ nav li {
         margin: 10px;
     }
 }
+
   /*/////////////////////////////////////
  ///////   Index Mainbody    ///////////
 /////////////////////////////////////*/
@@ -181,7 +170,6 @@ body {
 }
 
 .main-body{
-    //border-radius: 20px;
     border-radius: 4px;
     background-color: rgba(220,220,220,0.1);
     margin: 30px;
@@ -200,85 +188,61 @@ body {
     display: none;
     position: fixed;
     height: 100%;
-    width: 100%; /*small fix for underline scrollbar*/
+    width: 100%;
     text-align: center;
     transition: all 1s;
     background: rgba(10,10,10,0.65);
     z-index: 10;
-    
-    //padding: 10%;
+ 
 }
-/*Block toggle visible*/
+
+/*Toggle to visible*/
 #lightboxTarget:target, #thankYouMessage:target{
     display: block;
 }
 
 .contact-form{
     background: rgba(250,250,250,0.9);
-    //width: 100%;
-    //height: 100%;
     
     position: fixed;
     
     left: 10%;
     right: 10%;
     top: 10%;
-    //bottom: 10%;
-    //height: 200px;;
     
-    /*bottom: 10px;
-    //top: 10px;*/
-    
-    //margin: 10%;
-    //padding: 8px 6px;
     border-radius: 5px;
     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
     
-    /*TODO: fix close btn at bottom*/
     overflow-y: auto;
-    
     overflow-x: hidden;
     
     max-height: 80%;
-    //min-height: 100%;
-    //height: inherit;
-    
-    //width: 80%;
-      
 }
 
 .form-header{
     width: 100%;
     display: block;
-    //display: flex;
     position: relative;
-    //position: absolute;
 }
 .form-header h2 img{
     vertical-align:text-top;
-    //vertical-align: bottom;
-    //bottom: 0px;
 }
 
 .form-body{
-    //text-align: left;
     display: flex;
-    //align-content:flex-start;
     padding: 0px 10px;
-    
     flex-flow: wrap;
 }
+
 .form-body label > input{ 
-    /*  terible fix for required popup  */
-    //visibility: collapse;
+    /*Fix to create popup warning when form field (send to) is empty*/
     margin: 14px 7px;
-    //padding: 0px;
     width: 1px;
     height: 1px;
     z-index: -10;
-    //left: 2px;
     position: absolute;
 }
+
 .form-body label > input:not(:checked) ~ .fa-check-square-o{
   display: none;
 }
@@ -288,8 +252,6 @@ body {
 
 .form-body form{
     flex-basis: 200px;
-    //flex-grow: 1;
-    
     padding: 10px;
 }
 
@@ -300,21 +262,10 @@ body {
     padding: 10px;
 }
 
-.form-footer{
-    /*
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid black;
-    */
-}
-
 .closebtn{
     position:absolute;
     right: 8px;
     top: -14px;
-    //bottom: 10px;
     
     text-decoration: none;
     color: black;
@@ -340,7 +291,6 @@ body {
  ////////    Footer Block     //////////
 /////////////////////////////////////*/
 
-
 footer {
     text-align: right;
     margin-top: 0px;
@@ -356,7 +306,6 @@ footer a {
     padding: 4px 2px;
     margin-right: 10px;
     display: inline-block;
-
 }
 
 footer a img {
@@ -388,11 +337,11 @@ footer a img {
             display: none;
         }
     }
-
-    
+   
   /*/////////////////////////////////////
  ///////    Tablet Menu bar    /////////
 /////////////////////////////////////*/
+
     .menu-list{
         //display: flex;
         flex-direction: row;
@@ -425,7 +374,6 @@ footer a img {
 
 @media only screen and (min-width: 1020px) {
     /*TODO: design something for this*/
-
     
 }
 

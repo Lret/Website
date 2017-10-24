@@ -1,22 +1,19 @@
 html, body { min-height: 100vh; bottom: 0px; }
 body {
   background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
-  // background:#B7E8EB;
 }
+
 .sun{
-    /*  use for sun / horizon effect  */
-    //position: fixed;
-    /*  use for sun upgoing effect  */
+
     position: absolute; 
-    height: 400px; /*used for gradient effect offset (more is a longer gradient)*/
+    height: 400px; /*used for gradient effect lenght*/
     
-    //width: auto;
     right: 0px;
     left: 0px;
     top: 0%;
     bottom: 0px;
+    
     z-index: -10;
-    //background-color: aliceblue;
     overflow: hidden;
     
     background: rgb(255, 93, 177);
@@ -24,144 +21,59 @@ body {
     background: -webkit-linear-gradient(top, rgba(255, 93, 177, 1) 0%, rgba(2, 200, 255, 0.33) 77%, rgba(241, 252, 93, 0) 100%);
     background: linear-gradient(to bottom, rgba(255, 93, 177, 1) 0%, rgba(2, 200, 255, 0.33) 77%, rgba(241, 252, 93, 0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#f1fc5d', GradientType=0);
-    
-    /*
-    background: #ff5db1;
-    background: -moz-linear-gradient(top, #ff5db1 0%, #02c8ff 77%, #f1fc5d 100%);
-    background: -webkit-linear-gradient(top, #ff5db1 0%, #02c8ff 77%, #f1fc5d 100%);
-    background: linear-gradient(to bottom, #ff5db1 0%, #02c8ff 77%, #f1fc5d 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5db1', endColorstr='#f1fc5d', GradientType=0);*/ 
 }
+
 .sun img{
     /*  use for sun upgoing effect  */
     position: fixed;
     height: auto;
-    width: 100%;
-    
-    //filter: hue-rotate(45deg);
-    
-}
-.sun-icon{
-    /*
-    background: url(../resources/images/retroSun.svg); 
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-attachment: fixed;   
-    */
-    
-    /*
-    background: #00ff00 url(../resources/images/retroSun.svg) no-repeat fixed center;
-    */
-    /*TODO FIX THISS FKING GLITCH*/
-    position: absolute;
-    
-    position: fixed;
-    background-position: center;
-    
-  height: 100%;
-  width: 100%;
-  //width: 100vw !important;
-  //display: block;
-  background: url(../resources/images/retroSun.svg);
-     background-repeat:no-repeat;
-    //background-size: 100% 100%;
-    background-size:contain;
- z-index: -9;
-    filter: hue-rotate(20deg)
+    width: 100%;  
 }
 
 .ocean { 
     /*  use for sun / horizon effect  */
     position: absolute;
-    
-    //position:fixed;
-    
-    //height: 100%;
-    //height: 100%;
-    //height: auto;
+
     width: 100%;
  
-    top: 300px; /*Set offset of waves*/  
+    top: 300px; /*Offset of waves*/  
     z-index: -5;
     bottom: 0px;
 
     overflow: hidden;
-
 }
 
 .aqaurium{
     position: relative;
-    //height: 10%; /*Wave position*/
-    
-    //top: 30px;
-    height: 100px; /*Wave height / modulo */
-    //background-color: red;
+    height: 100px; /*Wave height / repeat(modulo) */
 }
-/*
-.wave {
-  background: url(../resources/images/wave.svg) repeat-x; 
-    //background-position: 0px bottom;
-    background-size: contain;
-    //background-size: 1600px 100%;
-    
-//background-size: auto;
-  position: absolute;
-  //top: 100px;
-  width: 100%;
-  //width: 3200px; /*Needed for xscrolling* /
-    //width: 100vw;
-   //height: 100%;
-  animation: wave 4s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-  transform: translate3d(0, 0, 0);
-    
-transform-origin: bottom;
-bottom: 0px;
-    
 
-}
-*/
 .wave {
-  background: url(../resources/images/wave.svg) repeat-x; 
+    background: url(../resources/images/wave.svg) repeat-x; 
     background-position: bottom;
     background-size: contain;
-    
-  position: absolute;
-  //top: 100px;
-  width: 200%;
-  width: 3200px; /*Needed for xscrolling*/
-    //width: 100vw;
+
+    position: absolute;
+
+    width: 3200px; /*Needed for xscrolling*/
     height: 100%;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-  //transform: translate3d(0, 0, 0);
-    
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+
     transform-origin: bottom;
     bottom: 0px;
-    
-
 }
 
 .wave:nth-of-type(2) {
-  //top: 0px;
-  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-  opacity: 1;
-  
+    animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+    opacity: 1;
 }
 
 .sea{
-    //box-sizing: content-box;
-    
-    //top: inherit;
-    
-    //top: 4px; /*small fix?*/
-    //position: static; /*not sure if this needed*/
-    
-    //top: 34%;
     height : 100%;
-    //bottom: 0px;
     
     width: 100%;
     background: #015871;
-    //position: absolute;
 }
 
 @keyframes wave {
