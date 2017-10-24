@@ -33,7 +33,6 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     
-    //background-image: url(../resources/images/office.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -66,7 +65,7 @@
     grid-area: section;
 }
 
-.about-body > footer{
+.about-body > .foot{
     grid-area: foot;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -152,17 +151,9 @@ hr{
 
 
   /*/////////////////////////////////////
- ////////    Mobile only     ///////////
-/////////////////////////////////////*/
-@media only screen and (max-width: 480px) {
-
-}
-
-
-  /*/////////////////////////////////////
  ////////   Desktop/tablet    //////////
 /////////////////////////////////////*/
-@media only screen and (min-width: 480px) {
+@media only screen and (min-device-width: 480px) and min-width : 480px{
     .about-body{
         grid-gap: 50px 0px;
         grid-template-areas: 
