@@ -1,3 +1,4 @@
+/*
 .pages-body {
     display: flex;
     flex-flow: wrap;
@@ -7,9 +8,10 @@
     
     flex-direction: column;
     
-    padding: 0px 10%;
+    padding: 0px 2%;
     
 }
+
 
 .pages-body > a {
 
@@ -26,13 +28,83 @@
     color: white;
      
 }
+*/
 
+/*
 .pages-body > a:hover{
     background-color: rgba(51,166,193,0.9);
 }
+*/
+body {
+    position: 
+}
 
-@media only screen and (min-width: 480px) {
-    .pages-body > a{
-        min-width: 500px;
+main {
+    position: absolute;
+    top: 175px;
+    width: 100%;
+
+}
+section {
+    margin: 0;
+   background: green;
+}
+section h2 {
+    font-family: Istok Web;
+    font-size: 30px;
+    color: white;
+    border-bottom: solid 3px white;
+    margin: 0;
+    padding-top: 40px;
+    display: block;
+    text-align: center;
+}
+section p {
+    margin: 0;
+    font-family: Lora;
+    display: block;
+    width: 90%;
+    padding: 33px;
+    padding-bottom: 50px;
+}
+
+section img {
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+    max-width: 100px;
+    transform-origin: center 66%;
+
+}
+section img:hover {
+    transform: rotate(360deg);
+    transition: transform 2s;
+}
+.yellow {
+    background: #F7E567;
+}
+.pink {
+    background: #F172BA;
+    color: white;
+}
+
+.blue {
+    background: #005771;
+    color: white;
+}
+
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+@media only screen and (min-width: 1020px) {
+
+    main {
+        display: flex;
     }
 }
