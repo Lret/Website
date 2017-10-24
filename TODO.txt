@@ -1,9 +1,0 @@
-			/// To Do //
-+ nav is een block is een kleur en semi transpirant
-- footer rechts onder icons social media + links contacts
-- Home page fullscreen image start
-- Home page scroll paralax
-
-
-
-
